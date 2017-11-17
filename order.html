@@ -39,23 +39,32 @@
 
 <main role="main">
 
-    <form>
+    <form id="order-form">
         <div class="container pad-top-3rem">
-            <!-- Example row of columns -->
-            <div class="row">
 
+            <!--div class="form-group">
+                <input type="text" class="form-control"
+                       name="username" id="username"
+                       placeholder="Enter your username..."
+                       required
+                >
+            </div-->
+
+
+            <div class="row">
                 <section class="col-md-4" id="crust-choice-container">
                     <h2>Choose your crust</h2>
 
                     <div class="form-group">
-                        <select name="crust-choice" class="form-control">
+                        <select name="crust-choice" class="form-control" onclick="toggleField('pizza-size-container');">
+                            <option disabled selected>Select a crust...</option>
                             <option value="thin">Thin</option>
                             <option value="deep">Deep Dish</option>
                         </select>
                     </div>
                 </section>
 
-                <section class="col-md-4 offset-md-2" id="pizza-size-container">
+                <section class="col-md-4 offset-md-2 hidden" id="pizza-size-container">
                     <h2>Choose your size</h2>
 
                     <!--div class="form-group">
@@ -76,6 +85,7 @@
 
                     <div class="form-group">
                         <select name="pizza-size" class="form-control">
+                            <option disabled selected>Select a size...</option>
                             <option value="sm">Small</option>
                             <option value="md">Medium</option>
                             <option value="lg">Large</option>
@@ -85,8 +95,9 @@
 
             </div>
 
+
             <div class="row">
-                <section class="col-md-4" id="toppings-meat-container">
+                <section class="col-md-4 hidden" id="toppings-meat-container">
                     <h2>Choose your meat toppings</h2>
 
                     <div class="form-check">
@@ -120,7 +131,7 @@
                     </div>
                 </section>
 
-                <section class="col-md-4 offset-md-2" id="toppings-other-container">
+                <section class="col-md-4 offset-md-2 hidden" id="toppings-other-container">
                     <h2>Choose your other toppings</h2>
 
                     <div class="form-check">
@@ -186,5 +197,6 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 <script src="js/vendor/popper.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/order.js"></script>
 </body>
 </html>
