@@ -43,7 +43,19 @@
         <div class="container pad-top-3rem">
             <!-- Example row of columns -->
             <div class="row">
-                <section class="col-md-4" id="pizza-size-container">
+
+                <section class="col-md-4" id="crust-choice-container">
+                    <h2>Choose your crust</h2>
+
+                    <div class="form-group">
+                        <select name="crust-choice" class="form-control">
+                            <option value="thin">Thin</option>
+                            <option value="deep">Deep Dish</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="col-md-4 offset-md-2" id="pizza-size-container">
                     <h2>Choose your size</h2>
 
                     <!--div class="form-group">
@@ -71,17 +83,88 @@
                     </div>
                 </section>
 
-                <section class="col-md-4 offset-md-2" id="crust-choice-container">
-                    <h2>Choose your crust</h2>
+            </div>
 
-                    <div class="form-group">
-                        <select name="crust-choice" class="form-control">
-                            <option value="thin">Thin</option>
-                            <option value="deep">Deep Dish</option>
-                        </select>
+            <div class="row">
+                <section class="col-md-4" id="toppings-meat-container">
+                    <h2>Choose your meat toppings</h2>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="pepperoni" class="form-check-input"> Pepperoni
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="sausage" class="form-check-input"> Sausage
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="bacon" class="form-check-input"> Bacon
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="chicken" class="form-check-input"> Chicken
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="meat-lover" class="form-check-input"> Combo (Meat Lover's)
+                        </label>
                     </div>
                 </section>
 
+                <section class="col-md-4 offset-md-2" id="toppings-other-container">
+                    <h2>Choose your other toppings</h2>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="peppers-banana" class="form-check-input"> Banana Peppers
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="spinach" class="form-check-input"> Spinach
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="olives-black" class="form-check-input"> Black Olives
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="olives-green" class="form-check-input"> Green Olives
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="mushrooms" class="form-check-input"> Mushrooms
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="onions" class="form-check-input"> Onions
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" name="topping[]" value="peppers-green" class="form-check-input"> Green Peppers
+                        </label>
+                    </div>
+                </section>
 
             </div>
 
