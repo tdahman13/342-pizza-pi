@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29a30878-271b-4f3d-a83d-70049d823f5c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/order.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/jumbotron.css" afterPath="$PROJECT_DIR$/css/jumbotron.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,17 +18,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="order.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/order.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="49" column="65" lean-forward="false" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
+            <state relative-caret-position="943">
+              <caret line="87" column="16" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
               <folding>
-                <element signature="e#1986#1993#0" expanded="true" />
-                <element signature="e#2531#2538#0" expanded="true" />
-                <element signature="e#2974#2981#0" expanded="true" />
-                <element signature="e#3428#3435#0" expanded="true" />
-                <element signature="e#3568#3574#0" expanded="true" />
+                <element signature="e#262#269#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,6 +52,8 @@
         <option value="$PROJECT_DIR$/js/vendor/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/js/vendor/jquery-3.2.1.slim.min.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/jumbotron.css" />
+        <option value="$PROJECT_DIR$/order.html" />
       </list>
     </option>
   </component>
@@ -66,7 +65,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="61" />
-    <option name="y" value="37" />
+    <option name="y" value="36" />
     <option name="width" value="1782" />
     <option name="height" value="1033" />
   </component>
@@ -127,6 +126,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/css" />
     </key>
@@ -153,15 +155,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510877739472</updated>
-      <workItem from="1510877741026" duration="1683000" />
+      <workItem from="1510877741026" duration="3344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1683000" />
+    <option name="totallyTimeSpent" value="3344000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="61" y="37" width="1782" height="1033" extended-state="0" />
+    <frame x="61" y="36" width="1782" height="1033" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24971941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -211,16 +213,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/jumbotron.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding>
-            <marker date="1510878219000" expanded="true" signature="80:108" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/popper.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -262,14 +254,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
+        <state relative-caret-position="407">
           <caret line="49" column="65" lean-forward="false" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
           <folding>
-            <element signature="e#1986#1993#0" expanded="true" />
-            <element signature="e#2531#2538#0" expanded="true" />
-            <element signature="e#2974#2981#0" expanded="true" />
-            <element signature="e#3428#3435#0" expanded="true" />
-            <element signature="e#3568#3574#0" expanded="true" />
+            <marker date="1510879476000" expanded="true" signature="32:4152" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="39:647" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="655:4144" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="724:1469" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="975:1039" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="1110:1462" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="1150:1450" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="1191:1311" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="1345:1436" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="1489:3531" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="1596:2026" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="1628:2015" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="1704:1893" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="1986:1993" ph="»" />
+            <marker date="1510879476000" expanded="true" signature="2055:3502" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="2121:3476" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="2156:2564" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="2531:2538" ph="»" />
+            <marker date="1510879476000" expanded="true" signature="2599:3007" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="2974:2981" ph="»" />
+            <marker date="1510879476000" expanded="true" signature="3042:3461" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="3428:3435" ph="»" />
+            <marker date="1510879476000" expanded="true" signature="3559:3600" ph="..." />
+            <marker date="1510879476000" expanded="true" signature="3568:3574" ph="©" />
+            <marker date="1510879476000" expanded="true" signature="3607:3685" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/jumbotron.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <marker date="1510879951000" expanded="true" signature="80:108" ph="{...}" />
+            <marker date="1510879951000" expanded="true" signature="124:150" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="87" column="16" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+          <folding>
+            <element signature="e#262#269#0" expanded="true" />
           </folding>
         </state>
       </provider>
