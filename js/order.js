@@ -28,15 +28,21 @@ $(document).ready(function($){
 
     $(".pizza-updater").on("change", function(e){
         let fieldName = $(this).attr('name');
-        pizzaOrder[fieldName] = $(this).val();
+        let choice = $(this).val();
+        if (fieldName == 'toppingsMeat' || fieldName == 'toppingsMisc'){
+            
+            pizzaOrder[fieldName].push($(this).val());
+        } else {
+            pizzaOrder[fieldName] = choice;
+        }
         saveOrder(pizzaOrder);
     });
 });
 
 function createOrder() {
     return {
-        crust: null,
-        size: null,
+        crustChoice: null,
+        pizzaSize: null,
         toppingsMeat: [],
         toppingsMisc: []
     };
