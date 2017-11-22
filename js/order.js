@@ -30,9 +30,13 @@ $(document).ready(function($){
         let fieldName = $(this).attr('name');
         let choice = $(this).val();
         if (fieldName == 'toppingsMeat' || fieldName == 'toppingsMisc'){
-            
-            pizzaOrder[fieldName].push($(this).val());
-        } else {
+            let index = pizzaOrder[fieldName].indexOf(choice);
+            if (index > -1) {
+                pizzaOrder[fieldName].splice(index, 1);
+            }else {
+                pizzaOrder[fieldName].push(choice);
+            }
+        }else {
             pizzaOrder[fieldName] = choice;
         }
         saveOrder(pizzaOrder);
