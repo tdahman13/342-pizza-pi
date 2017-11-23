@@ -65,9 +65,7 @@ function checkOrder(order) {
                     $("#" + pick).attr("Checked", true);
                 }
             }
-        } else {
-            console.log("fucking piece of shit");
-        }
+        } 
     }
 }
 

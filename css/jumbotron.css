@@ -10,3 +10,11 @@ body {
 .hidden {
     display: none !important;
 }
+
+/*.prem-item {
+	font-size: 0.75rem;
+}*/
+
+h3 {
+	font-size: 0.75rem;
+}

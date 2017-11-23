@@ -59,7 +59,7 @@
                         <select name="crustChoice" id="crust-choice" class="form-control pizza-updater">
                             <option disabled selected>Select a crust...</option>
                             <option class="thin-crust" value="thin">Thin</option>
-                            <option class="deep-dish" value="deep">Deep Dish</option>
+                            <option class="deep-dish" value="deep">Deep Dish *add $5.00*</option>
                         </select>
                     </div>
                 </section>
@@ -86,9 +86,9 @@
                     <div class="form-group">
                         <select name="pizzaSize" id="pizza-size" class="form-control pizza-updater">
                             <option disabled selected>Select a size...</option>
-                            <option value="sm">Small</option>
-                            <option value="md">Medium</option>
-                            <option value="lg">Large</option>
+                            <option value="sm">Small ($7.99)</option>
+                            <option value="md">Medium ($11.99)</option>
+                            <option value="lg">Large ($15.99)</option>
                         </select>
                     </div>
                 </section>
@@ -99,6 +99,7 @@
             <div class="row">
                 <section class="col-md-4 hidden toppings-container" id="toppings-meat-container">
                     <h2>Choose your meat toppings</h2>
+                    <h3>$1.50 per Topping</h3>
 
                     <div class="form-check">
                         <label class="form-check-label">
@@ -114,7 +115,7 @@
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="toppingsMeat" value="bacon" class="form-check-input pizza-updater" id="bacon"> Bacon
+                            <input type="checkbox" name="toppingsMeat" value="bacon" class="form-check-input pizza-updater" id="bacon"> Bacon*
                         </label>
                     </div>
 
@@ -126,13 +127,15 @@
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="toppingsMeat" value="meat-lover" class="form-check-input pizza-updater" id="meat-lover"> Combo (Meat Lover's)
+                            <input type="checkbox" name="toppingsMeat" value="meat-lover" class="form-check-input pizza-updater" id="meat-lover"> Combo (Meat Lover's)*
                         </label>
                     </div>
+                    <h3 class="prem-item">* Premium Items $2.50</h3>
                 </section>
 
                 <section class="col-md-4 offset-md-2 hidden toppings-container" id="toppings-other-container">
                     <h2>Choose your other toppings</h2>
+                    <h3>$1.00 per Topping</h3>
 
                     <div class="form-check">
                         <label class="form-check-label">
@@ -148,13 +151,13 @@
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="toppingsMisc" value="olives-black" class="form-check-input pizza-updater" id="olives-black"> Black Olives
+                            <input type="checkbox" name="toppingsMisc" value="olives-black" class="form-check-input pizza-updater" id="olives-black"> Black Olives*
                         </label>
                     </div>
 
                     <div class="form-check">
                         <label class="form-check-label">
-                            <input type="checkbox" name="toppingsMisc" value="olives-green" class="form-check-input pizza-updater" id="olives-green"> Green Olives
+                            <input type="checkbox" name="toppingsMisc" value="olives-green" class="form-check-input pizza-updater" id="olives-green"> Green Olives*
                         </label>
                     </div>
 
@@ -175,6 +178,7 @@
                             <input type="checkbox" name="toppingsMisc" value="peppers-green" class="form-check-input pizza-updater" id="peppers-green"> Green Peppers
                         </label>
                     </div>
+                    <h3 class="prem-item">* Premium Items $2.00 </h3>
                 </section>
 
             </div>
