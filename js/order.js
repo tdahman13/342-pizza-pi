@@ -15,8 +15,13 @@
 
 $(document).ready(function($){
     let pizzaOrder = getOrder();
+    
+    checkOrder(pizzaOrder);
 
-
+    // if (pizzaOrder.crustChoice === "deep") {
+    //     $("#crust-choice").val("deep").find("option[deep]").attr('selected', true);
+    //     $("#pizza-size-container").removeClass("hidden");       
+    // }
 
     $("#crust-choice").on("change", function(e){
         $("#pizza-size-container").removeClass("hidden");
@@ -31,7 +36,7 @@ $(document).ready(function($){
         let choice = $(this).val();
         if (fieldName == 'toppingsMeat' || fieldName == 'toppingsMisc'){
             let index = pizzaOrder[fieldName].indexOf(choice);
-            if (index > -1) {
+            if (index >= 0) {
                 pizzaOrder[fieldName].splice(index, 1);
             }else {
                 pizzaOrder[fieldName].push(choice);
@@ -43,6 +48,29 @@ $(document).ready(function($){
     });
 });
 
+function checkOrder(order) {
+    for (let choice in order) {
+        let picks = order[choice];
+        if (picks == null || picks == []) {
+            continue;
+        }else if (picks == "thin" || picks == "deep") {
+            $("#crust-choice").val(picks).find("option[picks]").attr('selected', true);
+            $("#pizza-size-container").removeClass("hidden");        
+        } else if (picks == "sm" || picks == "md" || picks == "lg") {
+            $("#pizza-size").val(picks).find("option[picks]").attr('selected', true);
+            $(".toppings-container").removeClass("hidden");   
+        } else if (picks) {
+            for (let pick of picks){
+                if (pick != "") {
+                    $("#" + pick).attr("Checked", true);
+                }
+            }
+        } else {
+            console.log("fucking piece of shit");
+        }
+    }
+}
+
 function createOrder() {
     return {
         crustChoice: null,
@@ -53,12 +81,12 @@ function createOrder() {
 }
 
 function saveOrder(pizzaOrder) {
-    localStorage.pizza_order = JSON.stringify(pizzaOrder);
+    sessionStorage.pizza_order = JSON.stringify(pizzaOrder);
 }
 
 function getOrder() {
-    return (localStorage['pizza_order'])
-        ? JSON.parse(localStorage['pizza_order'])
+    return (sessionStorage['pizza_order'])
+        ? JSON.parse(sessionStorage['pizza_order'])
         : createOrder();
 }
 
