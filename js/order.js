@@ -24,6 +24,7 @@ $(document).ready(function($){
             $("#sm").attr('hidden', true);
             $("#pizza-size").val('md').attr('selected', true);
             pizzaOrder.pizzaSize = 'md'
+            $(".alert").removeClass("hidden");
         }else if ($(this).val() == "deep"){
             $("#sm").attr('hidden', true);
         }else {
