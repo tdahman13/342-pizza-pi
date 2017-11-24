@@ -44,6 +44,7 @@ $(document).ready(function($){
         }else {
             pizzaOrder[fieldName] = choice;
         }
+        updatePrice(pizzaOrder);
         saveOrder(pizzaOrder);
     });
 });
@@ -70,17 +71,64 @@ function checkOrder(order) {
 }
 
 function updatePrice(order) {
+    order.pizzaPrice = 0.00;
+    if (order.crustChoice == "deep"){
+        order.pizzaPrice += 5.00;
+        console.log(order.pizzaPrice);
+    }
 
-    return;
+    switch(order.pizzaSize){
+        case 'sm':
+            order.pizzaPrice += 7.99;
+            console.log("small");
+            console.log(order.pizzaPrice);
+            break;
+
+        case 'md':
+            order.pizzaPrice += 11.99;
+            console.log("medium");
+            console.log(order.pizzaPrice);
+            break;
+
+        case 'lg':
+            order.pizzaPrice += 15.99;
+            console.log("large");
+            console.log(order.pizzaPrice);
+            break;
+    }
+
+    if (order.toppingsMeat !== null){
+        for (let topping of order.toppingsMeat){
+            if (topping == "bacon" || topping == "meat-lover"){
+                order.pizzaPrice += 2.50;
+                console.log(order.pizzaPrice);
+            }else {
+                order.pizzaPrice += 1.50;
+                console.log(order.pizzaPrice);
+            }
+        }
+    }
+
+    if (order.toppingsMisc !== null){
+        for (let topping of order.toppingsMisc){
+            if (topping == "olives-black" || topping == "olives-green"){
+                order.pizzaPrice += 2.00;
+                console.log(order.pizzaPrice);
+            }else {
+                order.pizzaPrice += 1.00;
+                console.log(order.pizzaPrice);
+            }
+        }
+    }
 }
 
 function createOrder() {
     return {
         crustChoice: null,
         pizzaSize: null,
+        pizzaPrice: 0.00,
         toppingsMeat: [],
-        toppingsMisc: [],
-        pizzaPrice: 0.00
+        toppingsMisc: []
     };
 }
 
