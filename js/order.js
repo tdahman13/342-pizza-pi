@@ -18,17 +18,25 @@ $(document).ready(function($){
     
     checkOrder(pizzaOrder);
 
-    // if (pizzaOrder.crustChoice === "deep") {
-    //     $("#crust-choice").val("deep").find("option[deep]").attr('selected', true);
-    //     $("#pizza-size-container").removeClass("hidden");       
-    // }
-
     $("#crust-choice").on("change", function(e){
         $("#pizza-size-container").removeClass("hidden");
     });
 
     $("#pizza-size").on("change", function(e){
         $(".toppings-container").removeClass("hidden");
+        $(".price-reset-section").removeClass("hidden");
+    });
+
+    $(".reset-button").on("click", function(e){
+        pizzaOrder.crustChoice = null;
+        pizzaOrder.pizzaSize = null;
+        pizzaOrder.pizzaPrice = 0.00;
+        pizzaOrder.toppingsMeat = [];
+        pizzaOrder.toppingsMisc = [];
+        saveOrder(pizzaOrder);
+        $("#pizza-size-container").addClass("hidden");
+        $(".toppings-container").addClass("hidden");
+        $(".price-reset-section").addClass("hidden");
     });
 
     $(".pizza-updater").on("change", function(e){
@@ -74,26 +82,19 @@ function updatePrice(order) {
     order.pizzaPrice = 0.00;
     if (order.crustChoice == "deep"){
         order.pizzaPrice += 5.00;
-        console.log(order.pizzaPrice);
     }
 
     switch(order.pizzaSize){
         case 'sm':
             order.pizzaPrice += 7.99;
-            console.log("small");
-            console.log(order.pizzaPrice);
             break;
 
         case 'md':
             order.pizzaPrice += 11.99;
-            console.log("medium");
-            console.log(order.pizzaPrice);
             break;
 
         case 'lg':
             order.pizzaPrice += 15.99;
-            console.log("large");
-            console.log(order.pizzaPrice);
             break;
     }
 
@@ -101,10 +102,8 @@ function updatePrice(order) {
         for (let topping of order.toppingsMeat){
             if (topping == "bacon" || topping == "meat-lover"){
                 order.pizzaPrice += 2.50;
-                console.log(order.pizzaPrice);
             }else {
                 order.pizzaPrice += 1.50;
-                console.log(order.pizzaPrice);
             }
         }
     }
@@ -113,10 +112,8 @@ function updatePrice(order) {
         for (let topping of order.toppingsMisc){
             if (topping == "olives-black" || topping == "olives-green"){
                 order.pizzaPrice += 2.00;
-                console.log(order.pizzaPrice);
             }else {
                 order.pizzaPrice += 1.00;
-                console.log(order.pizzaPrice);
             }
         }
     }
