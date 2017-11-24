@@ -51,7 +51,7 @@ $(document).ready(function($){
 function checkOrder(order) {
     for (let choice in order) {
         let picks = order[choice];
-        if (picks == null || picks == []) {
+        if (picks == null || picks == [] || picks >= 0.00) {
             continue;
         }else if (picks == "thin" || picks == "deep") {
             $("#crust-choice").val(picks).find("option[picks]").attr('selected', true);
@@ -69,12 +69,18 @@ function checkOrder(order) {
     }
 }
 
+function updatePrice(order) {
+
+    return;
+}
+
 function createOrder() {
     return {
         crustChoice: null,
         pizzaSize: null,
         toppingsMeat: [],
-        toppingsMisc: []
+        toppingsMisc: [],
+        pizzaPrice: 0.00
     };
 }
 
