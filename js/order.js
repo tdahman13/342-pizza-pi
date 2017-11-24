@@ -120,6 +120,13 @@ function updatePrice(order) {
             }
         }
     }
+    addPrice(order.pizzaPrice);
+}
+
+function addPrice(price) {
+    $(".price-container h4").remove();
+    let $newPrice = $("<h4>").text("PRICE: $" + price.toFixed(2));
+    $(".price-container").append($newPrice);
 }
 
 function createOrder() {
