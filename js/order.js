@@ -20,6 +20,16 @@ $(document).ready(function($){
 
     $("#crust-choice").on("change", function(e){
         $("#pizza-size-container").removeClass("hidden");
+        if (($(this).val() == "deep") && ($("#pizza-size").val() == 'sm')){
+            $("#sm").attr('hidden', true);
+            $("#pizza-size").val('md').attr('selected', true);
+            pizzaOrder.pizzaSize = 'md'
+        }else if ($(this).val() == "deep"){
+            $("#sm").attr('hidden', true);
+        }else {
+            $("#sm").attr('hidden', false);
+        }
+
     });
 
     $("#pizza-size").on("change", function(e){
