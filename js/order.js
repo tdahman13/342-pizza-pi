@@ -67,7 +67,8 @@ function checkOrder(order) {
             $("#pizza-size-container").removeClass("hidden");        
         } else if (picks == "sm" || picks == "md" || picks == "lg") {
             $("#pizza-size").val(picks).find("option[picks]").attr('selected', true);
-            $(".toppings-container").removeClass("hidden");   
+            $(".toppings-container").removeClass("hidden");
+            $(".price-reset-section").removeClass("hidden");
         } else if (picks) {
             for (let pick of picks){
                 if (pick != "") {
