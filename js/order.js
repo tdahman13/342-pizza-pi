@@ -169,22 +169,6 @@ function showAlert(order) {
     $(".alert").removeClass("hidden");
 }
 
-function getChanges() {
-    return (sessionStorage["pizza_changes"])
-        ? JSON.parse(sessionStorage["pizza_changes"])
-        : [];
-}
-
-function addChanges(pick, order) {
-    let changes = getChanges();
-    let toppings = (order.toppingsMeat).length + (order.toppingsMisc).length;
-    changes.push(pick);
-    changes.push(order.pizzaPrice.toFixed(2));
-    changes.push(toppings);
-    console.log(changes);
-    return changes;
-}
-
 // function sayHello() {
 //     alert("Hello!");
 // }
