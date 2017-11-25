@@ -20,15 +20,15 @@ $(document).ready(function($){
 
     $("#crust-choice").on("change", function(e){
         $("#pizza-size-container").removeClass("hidden");
-        if (($(this).val() == "deep") && ($("#pizza-size").val() == 'sm')){
-            $("#sm").attr('hidden', true);
-            $("#pizza-size").val('md').attr('selected', true);
-            pizzaOrder.pizzaSize = 'md'
+        if (($(this).val() == "deep") && ($("#pizza-size").val() == "sm")){
+            $("#sm").attr("hidden", true);
+            $("#pizza-size").val("md").attr("selected", true);
+            pizzaOrder.pizzaSize = "md";
             $(".alert").removeClass("hidden");
         }else if ($(this).val() == "deep"){
-            $("#sm").attr('hidden', true);
+            $("#sm").attr("hidden", true);
         }else {
-            $("#sm").attr('hidden', false);
+            $("#sm").attr("hidden", false);
         }
 
     });
@@ -52,9 +52,9 @@ $(document).ready(function($){
     });
 
     $(".pizza-updater").on("change", function(e){
-        let fieldName = $(this).attr('name');
+        let fieldName = $(this).attr("name");
         let choice = $(this).val();
-        if (fieldName == 'toppingsMeat' || fieldName == 'toppingsMisc'){
+        if (fieldName == "toppingsMeat" || fieldName == "toppingsMisc"){
             let index = pizzaOrder[fieldName].indexOf(choice);
             if (index >= 0) {
                 pizzaOrder[fieldName].splice(index, 1);
@@ -75,10 +75,10 @@ function checkOrder(order) {
         if (picks == null || picks == [] || picks >= 0.00) {
             continue;
         }else if (picks == "thin" || picks == "deep") {
-            $("#crust-choice").val(picks).find("option[picks]").attr('selected', true);
-            $("#pizza-size-container").removeClass("hidden");        
+            $("#crust-choice").val(picks).find("option[picks]").attr("selected", true);
+            $("#pizza-size-container").removeClass("hidden");
         } else if (picks == "sm" || picks == "md" || picks == "lg") {
-            $("#pizza-size").val(picks).find("option[picks]").attr('selected', true);
+            $("#pizza-size").val(picks).find("option[picks]").attr("selected", true);
             $(".toppings-container").removeClass("hidden");
             $(".price-reset-section").removeClass("hidden");
         } else if (picks) {
@@ -98,15 +98,15 @@ function updatePrice(order) {
     }
 
     switch(order.pizzaSize){
-        case 'sm':
+        case "sm":
             order.pizzaPrice += 7.99;
             break;
 
-        case 'md':
+        case "md":
             order.pizzaPrice += 11.99;
             break;
 
-        case 'lg':
+        case "lg":
             order.pizzaPrice += 15.99;
             break;
     }
@@ -154,8 +154,8 @@ function saveOrder(pizzaOrder) {
 }
 
 function getOrder() {
-    return (sessionStorage['pizza_order'])
-        ? JSON.parse(sessionStorage['pizza_order'])
+    return (sessionStorage["pizza_order"])
+        ? JSON.parse(sessionStorage["pizza_order"])
         : createOrder();
 }
 
@@ -228,12 +228,3 @@ function getOrder() {
 //
 // elly.name = "Elly";
 // console.log(elly);
-
-
-
-
-
-
-
-
-
