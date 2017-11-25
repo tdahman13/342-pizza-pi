@@ -67,6 +67,7 @@ $(document).ready(function($){
         }
         updatePrice(pizzaOrder);
         saveOrder(pizzaOrder);
+        addRow(choice, pizzaOrder);
     });
 });
 
@@ -165,6 +166,15 @@ function showAlert(order) {
     $("#pizza-size").val("md").attr("selected", true);
     order.pizzaSize = "md";
     $(".alert").removeClass("hidden");
+}
+
+function addRow(pick, order) {
+    let changes = [];
+    let toppings = (order.toppingsMeat).length + (order.toppingsMisc).length;
+    changes.push(pick);
+    changes.push(order.pizzaPrice);
+    changes.push(toppings);
+    console.log(changes);
 }
 
 // function sayHello() {
