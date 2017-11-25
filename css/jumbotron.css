@@ -22,9 +22,13 @@ h3 {
 
 main {
 	background-color: #506df9;
-	/*font-family: 'Cherry Cream Soda', cursive;*/
+	font-family: 'Cherry Cream Soda', cursive;
 }
 
 footer {
 	color: #fff;
+}
+
+#crust-choice-container {
+	background-color: orange;
 }

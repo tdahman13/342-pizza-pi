@@ -21,10 +21,7 @@ $(document).ready(function($){
     $("#crust-choice").on("change", function(e){
         $("#pizza-size-container").removeClass("hidden");
         if (($(this).val() == "deep") && ($("#pizza-size").val() == "sm")){
-            $("#sm").attr("hidden", true);
-            $("#pizza-size").val("md").attr("selected", true);
-            pizzaOrder.pizzaSize = "md";
-            $(".alert").removeClass("hidden");
+            showAlert(pizzaOrder);
         }else if ($(this).val() == "deep"){
             $("#sm").attr("hidden", true);
         }else {
@@ -54,6 +51,9 @@ $(document).ready(function($){
     $(".pizza-updater").on("change", function(e){
         let fieldName = $(this).attr("name");
         let choice = $(this).val();
+        if ((choice == "sm") && ($("#crust-choice").val() == "deep")){
+            showAlert(pizzaOrder);
+        };
         if (fieldName == "toppingsMeat" || fieldName == "toppingsMisc"){
             let index = pizzaOrder[fieldName].indexOf(choice);
             if (index >= 0) {
@@ -157,6 +157,13 @@ function getOrder() {
     return (sessionStorage["pizza_order"])
         ? JSON.parse(sessionStorage["pizza_order"])
         : createOrder();
+}
+
+function showAlert(order) {
+    $("#sm").attr("hidden", true);
+    $("#pizza-size").val("md").attr("selected", true);
+    order.pizzaSize = "md";
+    $(".alert").removeClass("hidden");
 }
 
 // function sayHello() {
