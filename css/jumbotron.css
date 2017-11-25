@@ -2,10 +2,12 @@
 body {
     padding-top: 3.5rem;
     background-color: #343a40;
+    color: white;
 }
 
 .pad-top-3rem {
     padding-top: 3rem;
+    background-color: #6885d6;
 }
 
 .hidden {
@@ -13,22 +15,39 @@ body {
 }
 
 .prem-item {
-	font-size: 0.75rem;
+	font-size: 0.875rem;
+}
+
+.price-reset-section {
+	padding-top: 3rem;
+}
+
+.toppings-container {
+	padding-top: 1rem;
+}
+
+.form-check-label {
+	font-size: 1.1rem;
+	font-weight: 600;
 }
 
 main {
 	background-color: #506df9;
 	font-family: 'Cinzel Decorative', cursive;
-	font-weight:800;
 }
 
 h2{
-	background-color: orange;
-	font-weight: 500;
+	background-color: #d0c9f5;
+	font-weight: 600;
 }
 
 h3 {
 	font-size: 0.875rem;
+}
+
+h4 {
+	font-size: 2rem;
+	font-weight: 600;
 }
 
 footer {
