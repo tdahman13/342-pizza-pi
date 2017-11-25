@@ -66,8 +66,8 @@ $(document).ready(function($){
             pizzaOrder[fieldName] = choice;
         }
         updatePrice(pizzaOrder);
-        saveOrder(pizzaOrder);
-        addRow(choice, pizzaOrder);
+        let changes = addChanges(choice, pizzaOrder);
+        saveOrder(pizzaOrder, changes);
     });
 });
 
@@ -151,8 +151,9 @@ function createOrder() {
     };
 }
 
-function saveOrder(pizzaOrder) {
+function saveOrder(pizzaOrder, pizzaChanges) {
     sessionStorage.pizza_order = JSON.stringify(pizzaOrder);
+    sessionStorage.pizza_changes = JSON.stringify(pizzaChanges);
 }
 
 function getOrder() {
@@ -168,13 +169,20 @@ function showAlert(order) {
     $(".alert").removeClass("hidden");
 }
 
-function addRow(pick, order) {
-    let changes = [];
+function getChanges() {
+    return (sessionStorage["pizza_changes"])
+        ? JSON.parse(sessionStorage["pizza_changes"])
+        : [];
+}
+
+function addChanges(pick, order) {
+    let changes = getChanges();
     let toppings = (order.toppingsMeat).length + (order.toppingsMisc).length;
     changes.push(pick);
-    changes.push(order.pizzaPrice);
+    changes.push(order.pizzaPrice.toFixed(2));
     changes.push(toppings);
     console.log(changes);
+    return changes;
 }
 
 // function sayHello() {
