@@ -27,12 +27,15 @@ $(document).ready(function($){
         }else {
             $("#sm").attr("hidden", false);
         }
-
     });
 
     $("#pizza-size").on("change", function(e){
         $(".toppings-container").removeClass("hidden");
         $(".price-reset-section").removeClass("hidden");
+        if (($(this).val() == "sm") && ($("#crust-choice").val() == "deep")){
+            showAlert(pizzaOrder);
+            console.log("fuck");
+        }
     });
 
     $(".reset-button").on("click", function(e){
@@ -51,9 +54,7 @@ $(document).ready(function($){
     $(".pizza-updater").on("change", function(e){
         let fieldName = $(this).attr("name");
         let choice = $(this).val();
-        if ((choice == "sm") && ($("#crust-choice").val() == "deep")){
-            showAlert(pizzaOrder);
-        };
+
         if (fieldName == "toppingsMeat" || fieldName == "toppingsMisc"){
             let index = pizzaOrder[fieldName].indexOf(choice);
             if (index >= 0) {

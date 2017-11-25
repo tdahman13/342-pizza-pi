@@ -12,23 +12,25 @@ body {
     display: none !important;
 }
 
-/*.prem-item {
-	font-size: 0.75rem;
-}*/
-
-h3 {
+.prem-item {
 	font-size: 0.75rem;
 }
 
 main {
 	background-color: #506df9;
-	font-family: 'Cherry Cream Soda', cursive;
+	font-family: 'Cinzel Decorative', cursive;
+	font-weight:800;
+}
+
+h2{
+	background-color: orange;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 0.875rem;
 }
 
 footer {
 	color: #fff;
-}
-
-#crust-choice-container {
-	background-color: orange;
 }
