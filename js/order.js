@@ -45,6 +45,7 @@ $(document).ready(function($){
         pizzaOrder.toppingsMeat = [];
         pizzaOrder.toppingsMisc = [];
         saveOrder(pizzaOrder);
+        $(".form-check-label input").attr("checked", false);
         $("#pizza-size-container").addClass("hidden");
         $(".toppings-container").addClass("hidden");
         $(".price-reset-section").addClass("hidden");
@@ -83,10 +84,10 @@ function checkOrder(order) {
         } else if (picks) {
             for (let pick of picks){
                 if (pick != "") {
-                    $("#" + pick).attr("Checked", true);
+                    $("#" + pick).attr("checked", true);
                 }
             }
-        } 
+        }updatePrice(order);
     }
 }
 

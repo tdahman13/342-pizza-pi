@@ -1,6 +1,7 @@
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
     padding-top: 3.5rem;
+    background-color: #343a40;
 }
 
 .pad-top-3rem {
@@ -17,4 +18,13 @@ body {
 
 h3 {
 	font-size: 0.75rem;
+}
+
+main {
+	background-color: #506df9;
+	/*font-family: 'Cherry Cream Soda', cursive;*/
+}
+
+footer {
+	color: #fff;
 }
