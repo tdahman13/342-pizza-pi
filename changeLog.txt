@@ -1,5 +1,5 @@
-I completed all of the listed issues.  The total is displayed after selection of pizza-size.  The small-size is hidden when deep-dish is selected.  An error message is displayed the trying to switch a small, thin-crust to small, deep-dish.  
+I completed all of the listed issues, and used session storage instead of local.  The total is displayed after selection of pizza-size.  The small-size is hidden when deep-dish is selected.  An error message is displayed the trying to switch a small, thin-crust to small, deep-dish.  
 
-I made a separate page to display the table with changes, with links in the navbar name "Changes".  The table could be expanded, but it works by pressisng the button to display changes.  I also added a reset button for user-picks that plugs into the pizzaOrder.  
+I made a separate page to display the table with changes, with links in the navbar name "Changes".  The table could be expanded, but it works by pressisng the button to display changes.  Changes logged to session storage.
 
-I added some styling, but I had spent the most time dealing with the functionality.    
+I added some styling, but I had spent the most time dealing with the functionality.  I also added a reset button for user-picks that plugs into the pizzaOrder.  

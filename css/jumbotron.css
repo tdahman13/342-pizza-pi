@@ -43,6 +43,16 @@ body {
 	font-weight: 800;
 }
 
+#img-main {
+	max-height: 16rem;
+	padding-bottom: 1rem;
+}
+
+.reset-button {
+	background-color: #c9cee8;
+	font-weight: 700; 
+}
+
 main {
 	background-color: #506df9;
 	font-family: 'Cinzel Decorative', cursive;
