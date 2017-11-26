@@ -35,18 +35,27 @@ body {
 	font-weight: 600;
 }
 
+#pizza-size, #crust-choice {
+	font-weight: 800;
+}
+
+.form-group select option{
+	font-weight: 800;
+}
+
 main {
 	background-color: #506df9;
 	font-family: 'Cinzel Decorative', cursive;
 }
 
 h2{
-	background-color: #d0c9f5;
+	background-color: #506df9;
 	font-weight: 600;
 }
 
 h3 {
 	font-size: 0.875rem;
+	font-weight: 800;
 }
 
 h4 {
@@ -56,4 +65,8 @@ h4 {
 
 footer {
 	color: #fff;
+}
+
+p {
+	font-weight: 800;
 }
