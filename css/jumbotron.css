@@ -9,6 +9,10 @@ body {
     background-color: #6885d6;
 }
 
+.pad-top-zero {
+	padding-top: 0;
+}
+
 .hidden {
     display: none !important;
 }
