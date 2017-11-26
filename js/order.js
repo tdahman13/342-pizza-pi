@@ -34,7 +34,6 @@ $(document).ready(function($){
         $(".price-reset-section").removeClass("hidden");
         if (($(this).val() == "sm") && ($("#crust-choice").val() == "deep")){
             showAlert(pizzaOrder);
-            console.log("fuck");
         }
     });
 
@@ -44,7 +43,7 @@ $(document).ready(function($){
         pizzaOrder.pizzaPrice = 0.00;
         pizzaOrder.toppingsMeat = [];
         pizzaOrder.toppingsMisc = [];
-        saveOrder(pizzaOrder);
+        sessionStorage.pizza_order = JSON.stringify(pizzaOrder);
         $(".form-check-label input").attr("checked", false);
         $("#pizza-size-container").addClass("hidden");
         $(".toppings-container").addClass("hidden");
@@ -167,6 +166,21 @@ function showAlert(order) {
     $("#pizza-size").val("md").attr("selected", true);
     order.pizzaSize = "md";
     $(".alert").removeClass("hidden");
+}
+
+function getChanges() {
+    return (sessionStorage["pizza_changes"])
+        ? JSON.parse(sessionStorage["pizza_changes"])
+        : [];
+}
+
+function addChanges(pick, order) {
+    let changes = getChanges();
+    let toppings = (order.toppingsMeat).length + (order.toppingsMisc).length;
+    changes.push(pick);
+    changes.push(order.pizzaPrice.toFixed(2));
+    changes.push(toppings);
+    return changes;
 }
 
 // function sayHello() {

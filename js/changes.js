@@ -1,40 +1,20 @@
 "use strict";
 
 $(document).ready(function($){
-    let pizzaOrder = getOrder();
-    
-    checkOrder(pizzaOrder);
+    let changes = getChanges();
 
-    $(".reset-button").on("click", function(e){
-        pizzaOrder.crustChoice = null;
-        pizzaOrder.pizzaSize = null;
-        pizzaOrder.pizzaPrice = 0.00;
-        pizzaOrder.toppingsMeat = [];
-        pizzaOrder.toppingsMisc = [];
-        saveOrder(pizzaOrder);
-        $(".form-check-label input").attr("checked", false);
-        $("#pizza-size-container").addClass("hidden");
-        $(".toppings-container").addClass("hidden");
-        $(".price-reset-section").addClass("hidden");
+    $("#show-table").on("click", function(e){
+        addRows(changes);
+        $("#show-table").addClass("hidden");
     });
 });
 
-function getChanges() {
-    return (sessionStorage["pizza_changes"])
-        ? JSON.parse(sessionStorage["pizza_changes"])
-        : [];
-}
-
-function addChanges(pick, order) {
-    let changes = getChanges();
-    let toppings = (order.toppingsMeat).length + (order.toppingsMisc).length;
-    changes.push(pick);
-    changes.push(order.pizzaPrice.toFixed(2));
-    changes.push(toppings);
-    console.log(changes);
-    return changes;
-}
-
-function displayTable() {
-	return
+function addRows(changes) {
+	for (let i = 0; i < changes.length; i += 3) {
+		$('#myTable tr:last').after($('<tr>'));
+		$('#myTable tr:last').append($('<th scope="row">').text((i+3)/3));
+		$('#myTable tr:last').append($('<td>').text(changes[i]));
+		$('#myTable tr:last').append($('<td>').text("$" + changes[i + 1]));
+		$('#myTable tr:last').append($('<td>').text(changes[i + 2]));
+	}
 }
