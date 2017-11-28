@@ -1,3 +1,7 @@
+Thomas Dahman
+CPST 342
+11/27/2017
+
 I completed all of the listed issues, and used session storage instead of local.  The total is displayed after selection of pizza-size.  The small-size is hidden when deep-dish is selected.  An error message is displayed the trying to switch a small, thin-crust to small, deep-dish.  
 
 I made a separate page to display the table with changes, with links in the navbar name "Changes".  The table could be expanded, but it works by pressisng the button to display changes.  Changes logged to session storage.
